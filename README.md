@@ -1,5 +1,102 @@
 # Welcome to the JavaScript(MERN) stack with Heidi
 
+## Schedule
+## Schedule 
+<table>
+<thead>
+    <th></th>
+    <th></th>
+    <th> Category </th>
+    <th> Topic </th>
+    <th> Remarks</th>
+</thead>
+    <tbody>
+    <tr>
+        <td>W1D1 </td>
+        <td>1</td>
+        <td>JS Fundamentals</td>
+        <td>Fundamentals </td>
+        <td><a href="./js1_fundamentals/js1_fundamentals.js">Code</a></td>
+    </tr>
+    <tr>
+        <td>W1D2 </td>
+        <td></td>
+        <td>JS Fundamentals & Intro to React</td>
+        <td>Functional Programming</td>
+        <td></td>
+    <tr>
+        <td>W1D3 </td>
+        <td>2</td>
+        <td>React</td>
+        <td>Props & State</td>
+       <td></td>
+    </tr>
+        <tr>
+        <td>W1D4 </td>
+        <td></td>
+        <td></td>
+        <td>Forms</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>W1D5 </td>
+        <td></td>
+        <td></td>
+        <td>Lifting State</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>W2D1 </td>
+        <td>3</td>
+        <td>API & Routing in React</td>
+        <td>API & useEffect</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>W2D2 </td>
+        <td></td>
+        <td> API & Routing in React </td>
+        <td>React Routing</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>W2D3 </td>
+        <td>4</td>
+        <td>Backend</td>
+        <td>Express without DB</td>
+        <td></td>    
+        </tr>
+    <tr>
+        <td> W2D4 </td>
+        <td></td>
+        <td></td>
+        <td>Backend with DB</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> W2D5 </td>
+        <td>5</td>
+        <td>Full Stack</td>
+        <td>CRUD</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> W3D1 </td>
+        <td></td>
+        <td>Validation</td>
+        <td></td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td></td>
+        <td>More on the exam</td>
+        <td> </td>
+        <td> </td>
+    </tr>
+    </tbody>
+</table>
+
 ## Notes
 - Not all the codes in the lecture will be provided
 - Make sure you DO NOT submit node_modules to the platform
