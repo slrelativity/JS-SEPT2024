@@ -57,7 +57,14 @@ console.log(secondAnimal, fourthAnimal)
 
 
 // ------------- spread/rest ------------
-const personCopy = { ...person, firstName : "Pepper", age: 16} ;
+// Creating copies of the arr/object elements 
+const personCopy = { 
+    ...person, 
+    firstName : "Pepper",  // will overwrite the firstName "Bob"
+    age: 16 // will add this key-value pair
+} ;
+
+const personCopy2 = {...person, firstName : "Pepper",  age: 16} ; // same as the above
 /* BEHIND THE SCENE
     1. Create an object personCopy
     2. grab all the key-value from person, put it in personCopy  
@@ -66,6 +73,87 @@ const personCopy = { ...person, firstName : "Pepper", age: 16} ;
 console.log(person);
 console.log(personCopy);
 
-const animalCopy = ["dragon", ...animals, "unicorn"]; // super helpful - push without .push
+const mythicalAnimals = ["dragon", ...animals, "unicorn"]; // super helpful - push without .push
 console.log(animals)
-console.log(animalCopy)
+console.log(mythicalAnimals)
+
+// ------------- arrow function ------------
+
+function sayHello(name){
+    console.log("Hello, " + name);
+}
+
+// created a variable "sayHello2", the variable stores a function
+const sayHello2 = function(name){
+    console.log("Hello, " + name);
+}
+
+const sayHello3 = (name) => {
+    console.log("Hello, " + name);
+}
+
+const sayHello4 = name => console.log("Hello, " + name);
+
+// execute the function
+sayHello4("Pepper");
+
+
+// a function that return something
+function changePrice(price, discount){
+    return price * discount;
+}
+
+// longhanded arrow function
+const changePrice2 = (price, discount) => {
+    return price * discount;
+}
+
+// short handed arrow function - without {}, implicit return (no need to type return)
+const changePrice3 = (price, discount) => price * discount;
+
+const changePrice4 = (price, discount) => ( // () could also provide an implicit return
+    price * discount // hidden return is present when they run the code
+)
+
+const newPrice = changePrice4(100, 0.9);
+console.log(newPrice);
+
+
+// ------------- ternary operator ------------
+
+
+const canAfford = (itemPrice, accountBalance) =>{
+    if(itemPrice > accountBalance) {
+        return `Cannot afford!`
+    }
+    else {
+        return "Can afford!";
+    }
+}
+
+// (condition)?if-result : else-result 
+// longhanded way with {} & return
+const canAfford2 = (itemPrice, accountBalance) => {
+    return (itemPrice > accountBalance)? "Cannot afford!" :  "Can afford!";
+}
+
+// short-handed without {} & implicit return (hidden return)
+const canAfford3 = (itemPrice, accountBalance) => 
+    (itemPrice > accountBalance)? "Cannot afford!" :  "Can afford!";
+
+let myAccountBalance = 1000;
+const drone = 1001;
+const chair = 299;
+console.log(canAfford3(drone, myAccountBalance));
+console.log(canAfford3(chair, myAccountBalance));
+
+
+const rating = 6;
+rating > 5?
+    console.log("The movie is great") : 
+    console.log("Not a good movie");
+
+
+// && - short-circuit logical operator for if without else
+rating>7 && console.log("This is awesome")
+// if all the conditions before && are TRUE, execute the right hand side
