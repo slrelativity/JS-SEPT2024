@@ -67,4 +67,10 @@ const cheapItemNames = shoppingList.filter((eachItem) => eachItem.price<100)
 
 console.log(cheapItemNames);
 
+// CRUD
 
+// create a new shoppingList with a new item
+
+// create a new shoppingList without  an item
+
+// create an updated shoppingList with a minor change in one of the items
