@@ -6,13 +6,17 @@ function App() {
 
   return (
     <>
+      {/*--- 2. DEMONSTRATION ON PROPS */}
       <MovieCard title="Barbie" rating={7} tags={["Pink", "Girls"]}/>
       <MovieCard title="Twister" rating={8} tags={["IsItGood?", "Tornado"]}/>
-      <MovieCard title="Alien" rating={9} tags={["Horror", "Scary"]}/>
+      <MovieCard title="Alien" rating={9} tags={["Horror", "Scary"]}/> 
 
-      {/* <Header />
+
+      {/*------ 1. DEMONSTRATION ON COMPONENTS & STYLES */}
+      <Header />
       <h1 style={{ backgroundColor : "teal"}}>React Demo</h1>
-      <button className="btn">Test</button> */}
+      <button className="btn">Test</button> 
+
 
 
 
