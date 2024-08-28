@@ -48,8 +48,7 @@ function insertionSort(nums =[]) {
         let temp = nums[i]
         let j = i -1;
         //  this is setting j to the left of index i
-        while(j >= 0 && nums[j] > temp){
-            // here we are comparing the two
+        while(j >= 0 && nums[j] > temp){// here we are comparing the two 
             nums[j + 1 ] = nums[j];
             j--;
         }
