@@ -29,7 +29,7 @@
         <td>2</td>
         <td>React</td>
         <td>Props & State</td>
-       <td></td>
+       <td><a href="./js2_react/react1-props-state/">Code</a></td>
     </tr>
         <tr>
         <td>W1D4 </td>
