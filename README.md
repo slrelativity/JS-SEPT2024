@@ -36,7 +36,10 @@
         <td></td>
         <td></td>
         <td>Forms</td>
-        <td></td>
+        <td><a href="./js2_react/react3-forms/src/components/Form1.jsx">Form1 (Barebone form)</a> |
+        <a href="./js2_react/react3-forms/src/components/Form2.jsx">Form2 (inline style)</a>|
+        <a href="./js2_react/react3-forms/src/components/Form3.jsx">Form3 (modularized errors)</a>
+        </td>
     </tr>
     <tr>
         <td>W1D5 </td>
