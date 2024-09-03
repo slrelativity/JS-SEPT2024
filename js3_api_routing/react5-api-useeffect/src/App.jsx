@@ -9,8 +9,8 @@ function App() {
 
   return (
     <>
-      {/* <FetchPokemon /> */}
-      <FetchPokemonOnLoad />
+      <FetchPokemon />
+      {/* <FetchPokemonOnLoad /> */}
     </>
   )
 }

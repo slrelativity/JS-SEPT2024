@@ -29,12 +29,23 @@ const FetchPokemon = () => {
             .catch(err=>console.log(err))
     }
 
+    const fetchPokemonWithAxiosAsync = async() =>{
+        try{
+            const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/snorlax`)
+            setPokemon(response.data)
+        }catch(err){
+            console.log(err)
+        }
+
+    }
+
 
     return (
         <div>
             <h3>Pokemon Fetch Demo</h3>
             <button onClick={fetchPokemon1}>Fetch pokemon!</button>
             <button onClick={fetchPokemonWithAxios}>Fetch with Axios!</button>
+            <button onClick={fetchPokemonWithAxiosAsync}>Fetch with Axios & async!</button>
 
             {
                 pokemon?
