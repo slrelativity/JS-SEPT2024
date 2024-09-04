@@ -51,7 +51,6 @@ function orderedIntersection(sortedA, sortedB) {
         }
         else {
             j++;
-
         }
     }
     return result;
