@@ -61,6 +61,6 @@ app.delete("/api/users/:id", (req, res)=>{
 })
 
 
-// 4. listen to the port
+// 4. listen to the port -- must be at the end
 const port = 8000;
 app.listen(port, ()=>console.log(`Listening on port ${port}`))
