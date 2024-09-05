@@ -88,6 +88,15 @@ const numsB5 = [2, 2, 6, 6, 7];
 const expected5 = [1, 2, 2, 2, 6, 6, 7, 10, 15, 20];
 
 
+// sortedA = [ 1, 4, 4 ] sortedA.length = 3
+// sortedB = [ 2, 4, 9 ] sortedB.length = 3
+// union = [ 1, 2 , 4, 4] 
+// i = 3
+// j = 2  
+// sortedA[i] = 4
+// sortedB[j] = 9   frequencyTable / hashmap
+
+
 function orderedMultisetUnion(sortedA, sortedB) {
     const union = [];
     let i = 0;
@@ -97,14 +106,14 @@ function orderedMultisetUnion(sortedA, sortedB) {
       if (sortedA[i] < sortedB[j]){
             union.push(sortedA[i])
             i++
-          } else if(sortedA[i] > sortedB[j]){
-            union.push(sortedB[j])
-            j++
-          }else {
-            union.push(sortedA[i])
-            i++
-            j++
-        }
+      } else if(sortedA[i] > sortedB[j]){
+        union.push(sortedB[j]) 
+        j++
+      }else {
+        union.push(sortedA[i])
+        i++
+        j++
+      }
     }
     while (i < sortedA.length) {
       union.push(sortedA[i])

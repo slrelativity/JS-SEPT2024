@@ -6,8 +6,6 @@
   and it's index.
 */
 
-
-//            0   1  2  3  4  5  6  7
 const nums1 = [1, 2, 3, 4, 6, 7, 8, 10];
 const expected1 = [
   { idx: 4, num: 6 },
@@ -23,6 +21,8 @@ const expected3 = [
   { idx: 2, num: 7 },
   { idx: 3, num: 9 },
 ];
+
+const nums40 = [1,1,1,3,5]
 // Explanation: Index 0 has no number before it, so it is not included.
 
 /**
@@ -36,15 +36,19 @@ const expected3 = [
  * @returns {NonConsecNums}
  */
 function allNonConsecutive(sortedNums) {
-  
+  let newArray=[]
+  for(let i=0;i<sortedNums.length-1;i++){ 
+    if(sortedNums[i+1]-sortedNums[i]!=1){
+      newArray.push({"idx":i+1,"num":sortedNums[i+1]})
+    }
+  }
+  return newArray
 }
 
-
-console.log(allNonConsecutive(nums1))
-console.log(allNonConsecutive(nums2))
-console.log(allNonConsecutive(nums3))
-
-
+// console.log(allNonConsecutive(nums1))
+// console.log(allNonConsecutive(nums2))
+// console.log(allNonConsecutive(nums3))
+// console.log(allNonConsecutive(nums40))
 
 
 // Interview Algo given to alumni Oct 2019
@@ -101,9 +105,44 @@ const expected8 = [
  *    only.
  */
 
+function findConsqSums(nums, targetSum) {
+  let finalArr = []
+  
+  for (let i=0; i<nums.length;i++){
+    let tempArr = [], sum = 0
+    for (let j = i; j < nums.length; j++) {
+      sum += nums[j]
+      tempArr.push(nums[j]) 
+      if (sum === targetSum) {
+        finalArr.push([...tempArr])
+      }
+    }
+  }
+  return finalArr
+}
+
+
+function findConsqSums2(numbers, targetSum) {
+  const summableSubsets = [];
+
+  for (let i = 0; i < numbers.length; i++) {
+    let sum = numbers[i];
+
+    for (let j = i + 1; j <= numbers.length; j++) {
+      if (sum === targetSum) {
+        summableSubsets.push(numbers.slice(i, j));
+      }
+      sum += numbers[j];
+    }
+  }
+  return summableSubsets;
+}
 
 
 
-
-
+console.log(findConsqSums(nums4,sum4))
+console.log(findConsqSums(nums5,sum5))
+console.log(findConsqSums(nums6,sum6))
+console.log(findConsqSums(nums7,sum7))
+console.log(findConsqSums(nums8,sum8))
 
