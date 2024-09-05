@@ -88,7 +88,34 @@ const numsB5 = [2, 2, 6, 6, 7];
 const expected5 = [1, 2, 2, 2, 6, 6, 7, 10, 15, 20];
 
 
-function orderedMultisetUnion(sortedA, sortedB) {}
+function orderedMultisetUnion(sortedA, sortedB) {
+    const union = [];
+    let i = 0;
+    let j=0;
+    
+    while (i < sortedA.length && j < sortedB.length){
+      if (sortedA[i] < sortedB[j]){
+            union.push(sortedA[i])
+            i++
+          } else if(sortedA[i] > sortedB[j]){
+            union.push(sortedB[j])
+            j++
+          }else {
+            union.push(sortedA[i])
+            i++
+            j++
+        }
+    }
+    while (i < sortedA.length) {
+      union.push(sortedA[i])
+      i++;
+    }
+      while (j < sortedB.length) {
+      union.push(sortedB[j])
+      j++;
+    }
+    return union
+  }
 
 
 
