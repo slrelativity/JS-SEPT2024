@@ -46,7 +46,18 @@ const obj1 = {
    */
   
    
-  function entries(obj) {}
+  function entries(obj) {
+    const result = []
+    for (const key in obj) {
+        if(Object.hasOwn(obj, key)){
+            result.push([key,obj[key]]);
+        }
+        
+    }
+    return result;
+  }
+    console.log (entries(obj1))
+    console.log (entries(obj2))
   
   
   /* 
@@ -82,10 +93,39 @@ const obj1 = {
    * @returns {string} A string formatted as a SQL insert statement where the
    *    columns and values are extracted from columnValuePairs.
    */
-  function insert(tableName, columnValuePairs) {}
+
+  function insert(tableName, columnValuePairs) {
+    let keyString =""
+    let valueString =""
+    for (const key in columnValuePairs) {
+        keyString += key +", "
+        typeof columnValuePairs[key] === "string"?
+          valueString += "'"+columnValuePairs[key]+"'" +", ":
+          valueString += columnValuePairs[key]+", "
+    }
+    return `INSERT INTO ${tableName} (${keyString.slice(0,-2)}) VALUES (${valueString.slice(0,-2)});`
+  }
   
-  /**
-   * - Time: O(?).
-   * - Space: O(?).
-   */
-  function insertFunctional(tableName, columnValuePairs) {} // .map / .filter / .keys / .values / entries
+  //need to add the "" for strings
+  function insertFunctional(tableName, columnValuePairs) {
+    let columnKeys = Object.keys(columnValuePairs) // [key1, key2, key3]
+    let columnValues = Object.values(columnValuePairs) //[val1, val2, val3]
+    return `INSERT INTO ${tableName} (${columnKeys}) VALUES (${columnValues});`;
+  } // .map / .filter / .keys / .values / entries
+  
+  
+  function insertFunctional2(tableName, columnValuePairs) {
+    const columns = Object.keys(columnValuePairs).join(", ");
+  
+    const values = Object.values(columnValuePairs) // [ "Jane", "Joe"]
+      .map((val) => (typeof val === "string" ? `'${val}'` : val))
+      .join(", "); // " 'Jane', 'Joe' ""
+  
+    return `INSERT INTO ${tableName} (${columns}) VALUES (${values});`;
+  }
+  
+  
+  
+  console.log(insert(table, insertData1))
+  console.log(insert(table, insertData2))
+  

@@ -50,4 +50,4 @@
 - Setup: No routes needed in App.jsx, but need to create the button in Dashboard
 - Get the id in the button inside .map (Refers to TodoList or 5.10 from my demo )
 - When the button is clicked, execute handleDelete with the ID, and send API request to delete
-- Upon successful API request, update the list from the state to remove that item (Refers to the platform/ TodoList / 5.10 from my demo)
+- Upon successful API request, update the list (in state) to remove that item (Refers to the platform/ TodoList / 5.10 from my demo)

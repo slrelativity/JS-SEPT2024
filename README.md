@@ -82,7 +82,7 @@
         <td>5</td>
         <td>Full Stack</td>
         <td>CRUD</td>
-        <td></td>
+        <td><a href="./js5_fullstack/readme.md">Notes </a></td>
     </tr>
     <tr>
         <td> W3D2 </td>
