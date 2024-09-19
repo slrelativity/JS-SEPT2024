@@ -30,7 +30,7 @@ return true if the first string can be built from the letters in the 2nd string
 Ignore case
 .indexOf will only tell you if the letter is found one time
 */
-// 1 h, 1 e, 3 l, 2 o, 1 r, 1 d
+
 const strA1 = "Hello World";
 const strB1 = "lloeh wordl";
 //const expected1 = true;
@@ -62,4 +62,23 @@ const expected5 = false;
  * @param {string} s2
  * @returns {boolean}
  */
-function canBuildS1FromS2(s1, s2) {}
+function canBuildS1FromS2(s1, s2) {
+    const map = {};
+    for(const letter of s2){
+        console.log(letter) // "l", "o"
+        if(!map[letter]){ // if that letter key is not in the map
+            map[letter] = 0; // build the key with 0 as the frequency
+        }
+        map[letter] = map[letter] + 1;
+    }
+    console.log(map)
+}
+/* map["l"]
+"lloeh wordl"
+    {
+        "l" : 2
+    
+    }
+*/
+
+console.log(canBuildS1FromS2(strA1, strB1))
