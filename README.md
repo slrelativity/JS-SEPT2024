@@ -1,15 +1,14 @@
 # Welcome to the JavaScript(MERN) stack with Heidi
 
-## Schedule
 ## Schedule 
 <table>
-<thead>
-    <th></th>
-    <th></th>
-    <th> Category </th>
-    <th> Topic </th>
-    <th> Remarks</th>
-</thead>
+    <thead>
+        <th></th>
+        <th></th>
+        <th> Category </th>
+        <th> Topic </th>
+        <th> Remarks</th>
+    </thead>
     <tbody>
     <tr>
         <td>W1D1 </td>

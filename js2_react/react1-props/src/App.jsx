@@ -6,6 +6,7 @@ function App() {
 
   return (
     <>
+    <h1>test {import.meta.env.VITE_OPENAI_API_KEY}</h1>
       {/*--- 2. DEMONSTRATION ON PROPS */}
       <MovieCard title="Barbie" rating={7} tags={["Pink", "Girls"]}/>
       <MovieCard title="Twister" rating={8} tags={["IsItGood?", "Tornado"]}/>

@@ -4,7 +4,16 @@ const ProductController = {
     getAll: async (req, res)=>{
         try{
             const allProducts = await Product.find(); // without anything in (), find all
-            res.json(allProducts);
+            const testProducts = await Product.find({
+                $or: [
+                    {title: {$regex: 'p', $options: 'i'}},
+                    {description: {$regex: 'p', $options: 'i'}},
+                    {price: '400'}
+                ]
+            })
+
+
+            res.json(testProducts);
         }catch(err){
             console.log(err);
             res.status(400).json(err); // frontend would be able to receive the json as an error
